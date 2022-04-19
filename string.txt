@@ -1,0 +1,83 @@
+        static int IndexOf(string par)
+        {
+            string text = "Ibrahim yumurta yaxsi oglandi";
+            int index_of_par = -1;
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (text[i] == par[0])
+                {
+                    index_of_par = i;
+                    bool found = false;
+                    for (int j = i; j-i<par.Length; j++)
+                    {
+                        found = true;
+                        if (text[j] != par[j-i])
+                        {
+                            found = false;
+                            break;
+                        }
+                    }
+                    if (found)
+                        return index_of_par;
+                    
+                    index_of_par= -1;
+                }
+            }
+            return index_of_par;
+        }
+        static int IndexOf(string par, int index)
+        {
+            string text = "Ibrahim yumurta yaxsi oglandi";
+            int index_of_par = -1;
+            for (int i = index; i < text.Length; i++)
+            {
+                if (text[i] == par[0])
+                {
+                    index_of_par= i;
+                    bool found = false;
+                    for (int j = i; j-i<par.Length; j++)
+                    {
+                        found = true;
+                        if (text[j] != par[j-i])
+                        {
+                            found = false;
+                            break;
+                        }
+                    }
+                    if (found)
+                    {
+                        return index_of_par;
+                    }
+                    index_of_par = -1;
+                }
+            }
+            return index_of_par;
+        }
+        static int IndexOf(string par, int index,int count)
+        {
+            string text = "Ibrahim yumurta yaxsi oglandi";
+            int index_of_par = -1;
+            for (int i = index; i < text.Length && i<index+count; i++)
+            {
+                if (text[i] == par[0])
+                {
+                    index_of_par= i;
+                    bool found = false;
+                    for (int j = i; j-i<par.Length; j++)
+                    {
+                        found = true;
+                        if (text[j] != par[j-i])
+                        {
+                            found = false;
+                            break;
+                        }
+                    }
+                    if (found)
+                    {
+                        return index_of_par;
+                    }
+                    index_of_par = -1;
+                }
+            }
+            return index_of_par;
+        }
